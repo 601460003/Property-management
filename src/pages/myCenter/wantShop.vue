@@ -1,6 +1,6 @@
 <template>
     <div class="big-box">
-      <v-header title="我的关注" style="background: white"></v-header>
+      <v-header title="我的关注" ></v-header>
       <div class="order">
         <van-icon name="flower-o" />
         <p>你还没有关注任何商品，和不现在就去逛逛~</p>

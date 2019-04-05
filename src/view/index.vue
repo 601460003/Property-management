@@ -1,87 +1,116 @@
 <template>
     <div>
       <!--头部图片-->
-      <header class="header-logo">
-        <img src="../assets/img/header.jpg" alt="">
+      <img src="../assets/home-o_03.png"  class="NB" v-show="isShow"/>
+      <header class="title">
+        <h3>华升物业</h3>
       </header>
-      <!--logo导航区-->
-      <div>
-        <van-notice-bar
-          text="关于小区的通知"
-          left-icon="volume-o"
-        />
-      </div>
+      <header class="header-logo">
+            <img src="../assets/img/header.png" />
+        <div class="header-content">
+          <p>关于促进金融产业发展的实施意见</p>
+        </div>
+      </header>
       <nav class="nav-container">
          <div class="logo-box" >
            <router-link to="/advice">
            <img src="../assets/img/logo_01.png" />
-           <p class="logo-name">提出建议</p>
+           <p class="logo-name">建议留言</p>
            </router-link>
          </div>
         <div class="logo-box">
           <router-link to="/electricity">
           <img src="../assets/img/logo_02.png" />
-          <p class="logo-name">光电费用</p>
+          <p class="logo-name">物业缴费</p>
           </router-link>
         </div>
         <div class="logo-box">
           <router-link to="/maintenance">
           <img src="../assets/img/logo_03.png" />
-          <p class="logo-name">快捷维修</p>
+          <p class="logo-name">设备维护</p>
           </router-link>
         </div>
         <div class="logo-box">
           <router-link to="/activities">
           <img src="../assets/img/logo_04.png" />
-          <p class="logo-name">小区活动</p>
+          <p class="logo-name">小区通告</p>
           </router-link>
         </div>
-        <div class="logo-box" @click="callOwner">
-          <img src="../assets/img/logo_05.png" />
-          <p class="logo-name">联系物业</p>
+        <div class="logo-box">
+          <img src="../assets/img/logo_06.png" />
+          <p class="logo-name">查询</p>
         </div>
         <div class="logo-box">
           <router-link to="/checkin">
-          <img src="../assets/img/logo_06.png" />
+          <img src="../assets/img/logo_05.png" />
           <p class="logo-name">登记</p>
           </router-link>
         </div>
-        <div class="logo-box" style="visibility: hidden">
+        <div class="logo-box" >
           <img src="../assets/img/logo_07.png" />
-          <p class="logo-name">房屋租赁</p>
+          <p class="logo-name">我的任务</p>
         </div>
-        <div class="logo-box" style="visibility: hidden">
+        <div class="logo-box"  @click="callOwner">
           <img src="../assets/img/logo_08.png" />
-          <p class="logo-name">关于我们</p>
+          <p class="logo-name">联系物业</p>
+        </div>
+        <div class="logo-box" >
+          <img src="../assets/img/logo_08.png"  style="visibility: hidden"/>
+          <p class="logo-name" style="visibility: hidden">个人中心</p>
         </div>
       </nav>
       <!--中心图片-->
-      <div class="content-logo">
-        <img src="../assets/img/content.jpg" />
-      </div>
-      <!--商品推荐标题-->
-      <h3 class="shop-title">商品推荐</h3>
-      <!--商品推荐内容-->
-      <div class="shop-container">
-        <div class="shop-box">
-          <img src="../assets/img/home.jpg" />
-          <p class="shop-content">空房咨询</p>
-          <p class="shop-price">￥0.00</p>
-          <p class="shop-count">月销34</p>
-        </div>
-        <div class="shop-box">
-          <img src="../assets/img/price.jpg" />
-          <p class="shop-content">小区物业费 平方米/月</p>
-          <p class="shop-price">￥3.00</p>
-          <p class="shop-count">月销50</p>
-        </div>
-      </div>
+      <!--<div class="content-logo">-->
+        <!--<img src="../assets/img/content.jpg" />-->
+      <!--</div>-->
+      <!--&lt;!&ndash;商品推荐标题&ndash;&gt;-->
+      <!--<h3 class="shop-title">商品推荐</h3>-->
+      <!--&lt;!&ndash;商品推荐内容&ndash;&gt;-->
+      <!--<div class="shop-container">-->
+        <!--<div class="shop-box">-->
+          <!--<img src="../assets/img/home.jpg" />-->
+          <!--<p class="shop-content">空房咨询</p>-->
+          <!--<p class="shop-price">￥0.00</p>-->
+          <!--<p class="shop-count">月销34</p>-->
+        <!--</div>-->
+        <!--<div class="shop-box">-->
+          <!--<img src="../assets/img/price.jpg" />-->
+          <!--<p class="shop-content">小区物业费 平方米/月</p>-->
+          <!--<p class="shop-price">￥3.00</p>-->
+          <!--<p class="shop-count">月销50</p>-->
+        <!--</div>-->
+      <!--</div>-->
+
     </div>
 </template>
 
 <script>
   import { Dialog } from 'vant';
+  import { Swipe, SwipeItem } from 'vant';
     export default {
+      created() {
+        let time = parseInt(localStorage.getItem('time'))
+        if (time) {
+          let nowTime = new Date().getTime();
+          let diff = nowTime-time
+          if (diff < 30 * 60 * 1000) {
+            this.isShow = false
+          }
+        } else {
+          let time = new Date().getTime();
+          localStorage.setItem('time', time)
+          this.isShow = true
+          setTimeout(() => {
+            this.isShow = false
+          }, 3000)
+        }
+      },
+      data(){
+        return{
+          isShow:true
+        }
+      },
+
       methods: {
         callOwner() {
           Dialog.alert({
@@ -93,12 +122,31 @@
 </script>
 
 <style scoped>
+  .NB{
+    position: absolute;
+    top: 0;
+    z-index: 2000;
+  }
+
   .header-logo {
+    position: relative;
   }
 
   .header-logo img {
     width: 100%;
-    height: 150px;
+    height: 2rem;
+    overflow: hidden;
+  }
+  .header-content{
+    height: .4rem;
+    line-height: .4rem;
+    background: #0E90C7;
+    text-align: center;
+    color: white;
+    font-size: .15rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
   }
   /*导航*/
   .nav-container{
@@ -106,30 +154,32 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-top: 15px;
+    background: #F1F1F1;
   }
   .logo-box {
-    width: 24%;
-    padding:5px 0;
+    width: 32.7%;
     text-align: center;
+    background: white;
+    margin: 1px;
+    padding: .2rem .1rem;
   }
   .logo-box img{
-    width: 55px;
-    height: 50px;
-    padding-bottom: 5px;
-    border-radius: 50%;
+    width: .5rem;
+    height: .5rem;
+    margin-bottom: 5px;
+    border-radius: 5px;
   }
   .logo-name{
     color: #333;
-    font-size: 14px;
+    font-size: 12px;
   }
   /*图片*/
 .content-logo{
-  border-top: 15px solid #f3f5f7;
+  /*border-top: 15px solid #f3f5f7;*/
 }
   .content-logo img{
     width: 100%;
-    height: 200px;
+    height: 1rem;
     padding: 10px 10px;
   }
   .shop-title{
@@ -167,5 +217,14 @@
     color: #999;
     text-align: right;
     padding-right: 5px;
+  }
+  .title{
+    height: 45px;
+    line-height: 45px;
+    background: #008FFF;
+  }
+  .title h3{
+    color: #fff;
+    padding-left: 15px;
   }
 </style>

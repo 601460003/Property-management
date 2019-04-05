@@ -61,7 +61,7 @@
 
 <style scoped>
   .big-box{
-    height: 115vh;
+    height: 100vh;
   }
   .search{
     height: 80px;

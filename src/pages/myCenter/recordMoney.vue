@@ -1,6 +1,6 @@
 <template>
     <div class="big-box">
-      <v-header title="充值记录" style="background: white"></v-header>
+      <v-header title="充值记录" ></v-header>
       <div class="order">
         <van-icon name="column" />
         <p>暂无记录</p>

@@ -1,8 +1,8 @@
 <template>
   <div class="big-box">
-    <v-header title="快捷维修"></v-header>
+    <v-header title="设备维护"></v-header>
     <div class="container">
-      <h2>快捷维修</h2>
+      <h2>设备维护</h2>
       <input type="text" placeholder="住户房号">
       <input type="text" placeholder="姓名">
       <input type="text" placeholder="电话">

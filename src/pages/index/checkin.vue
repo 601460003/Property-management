@@ -43,7 +43,7 @@
     border: 1px solid #1989fa;
     font-size: 16px;
     padding: 10px 0;
-    margin: 0 30px;
+    margin: 10px 30px;
   }
   .big-box{
     height: 100vh;

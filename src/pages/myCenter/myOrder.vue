@@ -1,7 +1,7 @@
 <template>
 <div class="big-box">
   <!--头部-->
-  <v-header title="订单列表" style="background: white"></v-header>
+  <v-header title="订单列表" ></v-header>
   <!--分页栏-->
   <div>
     <van-tabs v-model="active">

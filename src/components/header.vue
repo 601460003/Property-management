@@ -20,20 +20,19 @@
 
 <style scoped>
   .title-aheader{
-    text-align: left;
     height: 40px;
-    line-height: 40px;
     font-size: 18px;
     font-weight: 500;
+    padding-top: 8px;
+    background: #008FFF;
+    color: #FFFFFF;
   }
  .van-icon{
    font-size: 22px;
-   position: absolute;
-   top: 10px;
+   vertical-align: bottom;
+   padding-left: 10px;
  }
-  .name{
-   padding-left: 30px;
-  }
+
 
 
 </style>
