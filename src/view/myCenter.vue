@@ -9,7 +9,7 @@
         </div>
         <div class="header-main">
           <img src="../assets/header.jpeg" />
-          <p>物业管理</p>
+          <p>物业管理员</p>
           <p>[普通会员]</p>
         </div>
         <div class="header-right">
@@ -144,8 +144,8 @@
     background: #e2423d;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    animation:myfirst 15s;
-    -webkit-animation:myfirst 15s; /* Safari and Chrome */
+    animation:myfirst 15s infinite linear;
+    -webkit-animation:myfirst 15s infinite linear; /* Safari and Chrome */
   }
   @keyframes myfirst
   {

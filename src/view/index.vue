@@ -98,8 +98,8 @@
           }
         } else {
           let time = new Date().getTime();
-          localStorage.setItem('time', time)
-          this.isShow = true
+          localStorage.setItem('time', time);
+          this.isShow = true;
           setTimeout(() => {
             this.isShow = false
           }, 3000)
@@ -107,7 +107,7 @@
       },
       data(){
         return{
-          isShow:true
+          isShow:false
         }
       },
 
@@ -126,6 +126,8 @@
     position: absolute;
     top: 0;
     z-index: 2000;
+    width: 100%;
+    height: 100%;
   }
 
   .header-logo {

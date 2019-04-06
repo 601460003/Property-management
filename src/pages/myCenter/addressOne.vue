@@ -1,6 +1,6 @@
 <template>
     <div class="big-box">
-      <v-header title="新增地址" style="background: white"></v-header>
+      <v-header title="新增地址" ></v-header>
       <div class="content">
         <van-address-edit
           show-postal

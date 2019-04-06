@@ -1,7 +1,10 @@
 <template>
   <div id="app">
-    <router-view/>
+
+        <router-view></router-view>
+    <transition name="fade">
     <v-tabber v-show="$route.meta.showFooter" ></v-tabber>
+    </transition>
   </div>
 </template>
 
@@ -13,4 +16,7 @@ export default {
   },
 }
 </script>
+<style scoped>
+
+</style>
 
