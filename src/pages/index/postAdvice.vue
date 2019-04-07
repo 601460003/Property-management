@@ -47,6 +47,6 @@ h2{
 }
 .big-box{
   height: 100vh;
-  background: #f3f5f7;
+background:linear-gradient(#42D4E5,#BFCDFD);
 }
 </style>

@@ -8,6 +8,7 @@
       :dot="tab.dot"
       :info="tab.info"
       :key="index"
+
     >
       {{tab.name}}
     </van-tabbar-item>
@@ -34,8 +35,8 @@
               {
                 name: '我的',
                 path: '/my',
-                pathName: 'subject',
-                icon: 'vip-card-o',
+                pathName: 'my',
+                icon: 'manager-o',
                 dot: false,
                 info: ''
               },
@@ -47,5 +48,11 @@
 </script>
 <style scoped>
 
+  .van-tabbar-item{
+    font-size: 15px;
+  }
+  .van-icon::before{
+    font-size: 30px;
+  }
 </style>
 

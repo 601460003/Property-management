@@ -3,13 +3,18 @@
       <!--头部图片-->
       <img src="../assets/home-o_03.png"  class="NB" v-show="isShow"/>
       <header class="title">
+        <span class="top"><van-icon name="plus" /></span>
         <h3>华升物业</h3>
       </header>
       <header class="header-logo">
-            <img src="../assets/img/header.png" />
-        <div class="header-content">
-          <p>关于促进金融产业发展的实施意见</p>
-        </div>
+        <van-swipe :autoplay="4000" indicator-color="white" >
+          <van-swipe-item>
+            <img src="../assets/title.png" />
+          </van-swipe-item>
+          <van-swipe-item>
+            <img src="../assets/title-o.png"/>
+          </van-swipe-item>
+        </van-swipe>
       </header>
       <nav class="nav-container">
          <div class="logo-box" >
@@ -37,8 +42,10 @@
           </router-link>
         </div>
         <div class="logo-box">
+          <router-link to="/car">
           <img src="../assets/img/logo_06.png" />
-          <p class="logo-name">查询</p>
+          <p class="logo-name">车位预约</p>
+          </router-link>
         </div>
         <div class="logo-box">
           <router-link to="/checkin">
@@ -47,8 +54,10 @@
           </router-link>
         </div>
         <div class="logo-box" >
+          <router-link to="/visit">
           <img src="../assets/img/logo_07.png" />
-          <p class="logo-name">我的任务</p>
+          <p class="logo-name">访客列表</p>
+          </router-link>
         </div>
         <div class="logo-box"  @click="callOwner">
           <img src="../assets/img/logo_08.png" />
@@ -59,6 +68,7 @@
           <p class="logo-name" style="visibility: hidden">个人中心</p>
         </div>
       </nav>
+      <van-icon name="plus" />
       <!--中心图片-->
       <!--<div class="content-logo">-->
         <!--<img src="../assets/img/content.jpg" />-->
@@ -85,8 +95,7 @@
 </template>
 
 <script>
-  import { Dialog } from 'vant';
-  import { Swipe, SwipeItem } from 'vant';
+  import { Swipe, SwipeItem,Dialog,Icon } from 'vant';
     export default {
       created() {
         let time = parseInt(localStorage.getItem('time'))
@@ -122,6 +131,7 @@
 </script>
 
 <style scoped>
+
   .NB{
     position: absolute;
     top: 0;
@@ -136,7 +146,7 @@
 
   .header-logo img {
     width: 100%;
-    height: 2rem;
+    height: 1.8rem;
     overflow: hidden;
   }
   .header-content{
@@ -221,12 +231,22 @@
     padding-right: 5px;
   }
   .title{
-    height: 45px;
-    line-height: 45px;
+    height: 50px;
+    line-height: 50px;
     background: #008FFF;
+    position: relative;
   }
   .title h3{
     color: #fff;
     padding-left: 15px;
+  }
+  .top{
+    position: absolute;
+    right: 15px;
+    top: 5px;
+  }
+  .van-icon-plus:before{
+    font-size: 22px;
+    color: #fff;
   }
 </style>

@@ -99,7 +99,7 @@
     color: #999;
   }
   .main-btn {
-    margin-top: 10px;
+    margin-top: 30px;
     text-align: center;
     font-size: 25px;
   }

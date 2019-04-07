@@ -13,6 +13,8 @@ import recordMoney from '@/pages/myCenter/recordMoney'
 import address from '@/pages/myCenter/address'
 import addressOne from '@/pages/myCenter/addressOne'
 import wantShop from '@/pages/myCenter/wantShop'
+import car from '@/pages/index/car'
+import visit from '@/pages/index/visit'
 
 Vue.use(Router)
 
@@ -40,6 +42,14 @@ export default new Router({
     {
       path: '/maintenance',
       component: maintenance
+    },
+    {
+      path: '/car',
+      component: car
+    },
+    {
+      path: '/visit',
+      component: visit
     },
     {
       path: '/electricity',

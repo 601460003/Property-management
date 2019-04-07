@@ -47,6 +47,6 @@
   }
   .big-box{
     height: 100vh;
-    background: #f3f5f7;
+    background: linear-gradient(#F8DFE2,#ACD5F7);
   }
 </style>

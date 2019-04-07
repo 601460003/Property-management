@@ -150,8 +150,8 @@
   @keyframes myfirst
   {
     0%   {background:red;}
-    25%  {background:yellow;}
-    50%  {background:blue;}
+    25%  {background:orange;}
+    50%  {background:yellowgreen;}
     100% {background:green;}
   }
 

@@ -6,21 +6,6 @@
       <img src="../../assets/water.jpg" >
       <p>0评论 5月前</p>
     </div>
-    <div class="container">
-      <h3>停水公告</h3>
-      <img src="../../assets/water.jpg" >
-      <p>0评论 5月前</p>
-    </div>
-    <div class="container">
-      <h3>停水公告</h3>
-      <img src="../../assets/water.jpg" >
-      <p>0评论 5月前</p>
-    </div>
-    <div class="container">
-      <h3>停水公告</h3>
-      <img src="../../assets/water.jpg" >
-      <p>0评论 5月前</p>
-    </div>
   </div>
 </template>
 
@@ -48,6 +33,7 @@
   .container img{
     width: 100%;
     height: 200px;
+    border-radius: 5px;
   }
   .container p{
     color: #999;
