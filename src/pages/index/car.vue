@@ -42,6 +42,9 @@
     height: 100vh;
     background:#FAFAFA;
   }
+  .box-a{
+    position: relative;
+  }
   .box,.box-a{
     padding: 15px 20px;
     font-size: 18px;
@@ -63,6 +66,9 @@
   font-size: 14px;
   padding: 8px;
   border-radius: 5px;
+  position: absolute;
+  right: 15px;
+  top: 10px;
 }
   .footer{
     color: #fff;

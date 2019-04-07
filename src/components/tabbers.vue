@@ -1,16 +1,25 @@
 <template>
 <div>
-  <van-tabbar v-model="active" style="z-index: 1999" >
-    <van-tabbar-item
-      v-for="(tab, index) in tabbar"
-      :icon="tab.icon"
-      :to="tab.path"
-      :dot="tab.dot"
-      :info="tab.info"
-      :key="index"
+  <van-tabbar
+    v-model="active"
+    active-color="#14C295"
+  >
 
-    >
-      {{tab.name}}
+    <van-tabbar-item @click="goHome">
+      <div slot="icon" ><van-icon name="wap-home" size="23px" /></div>
+      <span>首页</span>
+    </van-tabbar-item>
+    <van-tabbar-item @click="goServe" >
+      <div slot="icon" ><van-icon name="like-o" size="23px" /></div>
+      <span>服务</span>
+    </van-tabbar-item>
+    <van-tabbar-item  @click="goCommunity">
+      <div slot="icon" ><van-icon name="chat-o" size="23px" /></div>
+      <span>社区</span>
+    </van-tabbar-item>
+    <van-tabbar-item  @click="goMy">
+      <div slot="icon" ><van-icon name="manager-o" size="23px" /></div>
+      <span>我的</span>
     </van-tabbar-item>
   </van-tabbar>
 
@@ -18,41 +27,33 @@
 </template>
 
 <script>
+  import { Toast } from 'vant';
     export default {
 
       data(){
           return{
             active: 0,
-            shopsCount:0,
-            tabbar: [
-              {
-                name: '首页',
-                path: '/',
-                pathName: 'home',
-                icon: 'wap-home',
-                dot: false,
-              },
-              {
-                name: '我的',
-                path: '/my',
-                pathName: 'my',
-                icon: 'manager-o',
-                dot: false,
-                info: ''
-              },
-
-            ]
           }
       },
+      methods:{
+        goHome(){
+          this.$router.push({path:'/'})
+        },
+        goServe(){
+          Toast('努力开发中');
+        },
+        goCommunity(){
+          Toast('努力开发中');
+        },
+        goMy(){
+          this.$router.push({path:'/my'})
+        }
+      }
     }
 </script>
 <style scoped>
-
   .van-tabbar-item{
-    font-size: 15px;
-  }
-  .van-icon::before{
-    font-size: 30px;
+    font-size: 14px;
   }
 </style>
 
