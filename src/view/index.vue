@@ -4,7 +4,7 @@
       <img src="../assets/home-o_03.png"  class="NB" v-show="isShow"/>
       <header class="title">
         <span class="top"><van-icon name="plus" /></span>
-        <h3>华升物业</h3>
+        <h3>物业管理</h3>
       </header>
       <header class="header-logo">
         <van-swipe :autoplay="4000" indicator-color="white" >
