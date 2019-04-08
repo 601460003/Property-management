@@ -43,7 +43,7 @@
           Toast('努力开发中');
         },
         goCommunity(){
-          Toast('努力开发中');
+         this.$router.push({path:'/community'})
         },
         goMy(){
           this.$router.push({path:'/my'})

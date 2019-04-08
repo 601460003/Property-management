@@ -233,12 +233,12 @@
   .title{
     height: 50px;
     line-height: 50px;
-    background: #008FFF;
+    background: linear-gradient(to bottom right, #3EC7F8 , #04A6E8);
     position: relative;
+    text-align: center;
   }
   .title h3{
     color: #fff;
-    padding-left: 15px;
   }
   .top{
     position: absolute;

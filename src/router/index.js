@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import index from '@/view/index'
 import my from '@/view/myCenter'
+import community from '@/view/community'
 import advice from '@/pages/index/postAdvice'
 import maintenance from '@/pages/index/maintenance'
 import electricity from '@/pages/index/electricity'
@@ -31,6 +32,13 @@ export default new Router({
     {
       path: '/my',
       component: my,
+      meta:{
+        showFooter:true
+      }
+    },
+    {
+      path: '/community',
+      component: community,
       meta:{
         showFooter:true
       }
