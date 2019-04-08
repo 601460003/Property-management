@@ -68,7 +68,6 @@
           <p class="logo-name" style="visibility: hidden">个人中心</p>
         </div>
       </nav>
-      <van-icon name="plus" />
       <!--中心图片-->
       <!--<div class="content-logo">-->
         <!--<img src="../assets/img/content.jpg" />-->

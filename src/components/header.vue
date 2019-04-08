@@ -25,7 +25,7 @@
     font-weight: 500;
     padding-top: 12px;
     background: linear-gradient(to bottom right, #3EC7F8 , #04A6E8);
-    color: #C9ECFB;
+    color: #fff;
   }
  .van-icon{
    font-size: 22px;

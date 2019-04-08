@@ -10,8 +10,8 @@
       <span>首页</span>
     </van-tabbar-item>
     <van-tabbar-item @click="goServe" >
-      <div slot="icon" ><van-icon name="like-o" size="23px" /></div>
-      <span>服务</span>
+      <div slot="icon" ><van-icon name="shop-o" size="23px" /></div>
+      <span>超市</span>
     </van-tabbar-item>
     <van-tabbar-item  @click="goCommunity">
       <div slot="icon" ><van-icon name="chat-o" size="23px" /></div>
