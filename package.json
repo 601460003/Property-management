@@ -10,15 +10,16 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "vue": "^2.5.2",
-    "vue-router": "^3.0.1",
-    "vant": "^1.6.6",
     "better-scroll": "^0.1.8",
+    "optimize-css-assets-webpack-plugin": "^3.2.0",
     "stylus": "^0.54.5",
+    "vant": "^1.6.6",
+    "vue": "^2.5.2",
     "vue-awesome-swiper": "^2.2.9",
     "vue-infinite-scroll": "^2.0.0",
     "vue-lazyload": "^1.0.0-rc12",
     "vue-resource": "^1.0.3",
+    "vue-router": "^3.0.1",
     "vuex": "^2.1.1"
   },
   "devDependencies": {
