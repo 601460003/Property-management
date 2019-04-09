@@ -88,6 +88,7 @@
     background: linear-gradient(to bottom right, #3EC7F8 , #04A6E8);
     position: relative;
     text-align: center;
+    width: 100%;
   }
   .title h3{
     color: #fff;

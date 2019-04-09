@@ -1,10 +1,10 @@
 <template>
   <div class="big-box">
-    <v-header title="小区通知"></v-header>
-    <div class="container">
-      <h3>停水公告</h3>
+    <v-header title="小区通知" ></v-header>
+    <div class="container" >
+      <h3 >停水公告</h3>
       <img src="../../assets/water.jpg" >
-      <p>0评论 5月前</p>
+      <p >0评论 5月前</p>
     </div>
   </div>
 </template>
@@ -14,6 +14,9 @@
   export default {
     components:{
       'v-header':header,
+    },
+    methods:{
+
     }
   }
 </script>

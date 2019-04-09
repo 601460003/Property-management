@@ -9,7 +9,7 @@
       <div slot="icon" ><van-icon name="wap-home" size="23px" /></div>
       <span>首页</span>
     </van-tabbar-item>
-    <van-tabbar-item @click="goServe" >
+    <van-tabbar-item @click="goSupermarket" >
       <div slot="icon" ><van-icon name="shop-o" size="23px" /></div>
       <span>超市</span>
     </van-tabbar-item>
@@ -39,14 +39,14 @@
         goHome(){
           this.$router.push({path:'/'})
         },
-        goServe(){
-          Toast('努力开发中');
+        goSupermarket(){
+          this.$router.push({path:'/supermarket'})
         },
         goCommunity(){
          this.$router.push({path:'/community'})
         },
         goMy(){
-          this.$router.push({path:'/my'})
+          this.$router.replace({path:'/my'});
         }
       }
     }

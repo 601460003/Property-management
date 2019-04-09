@@ -1,7 +1,7 @@
 <template>
   <div class="title-aheader">
    <span @click="back" class="top"><van-icon name="arrow-left" /></span>
-   <span class="name"> {{title}}</span>
+   <span class="name" @wode="console.log(111)"> {{title}}</span>
   </div>
 </template>
 
@@ -13,7 +13,7 @@
       methods:{
         back(){
           this.$router.go(-1)
-        }
+        },
       }
     }
 </script>

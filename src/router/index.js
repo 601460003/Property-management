@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import index from '@/view/index'
 import my from '@/view/myCenter'
+import supermarket from '@/view/supermarket'
 import community from '@/view/community'
 import advice from '@/pages/index/postAdvice'
 import maintenance from '@/pages/index/maintenance'
@@ -39,6 +40,13 @@ export default new Router({
     {
       path: '/community',
       component: community,
+      meta:{
+        showFooter:true
+      }
+    },
+    {
+      path: '/supermarket',
+      component: supermarket,
       meta:{
         showFooter:true
       }
@@ -96,5 +104,5 @@ export default new Router({
       path: '/wantShop',
       component: wantShop
     },
-  ]
+  ],mode:'history'
 })
