@@ -6,68 +6,70 @@
     <h3>社区</h3>
   </header>
   <!--独立的评论-->
-  <article class="first">
-    <header class="container">
-      <div class="logo">
-        <img src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1554687527&di=838d35136e344c1428f881ab80dc2f2e&src=http://b-ssl.duitang.com/uploads/item/201711/01/20171101211115_ZBPz5.jpeg" alt="">
-      </div>
-      <div class="name">
-        <span>多啦A梦的小木屋</span>
-        <p>-Much offter,much prosperity-</p>
-      </div>
-      <div class="icon">
-        <div slot="icon" ><van-icon name="like" size="23px" /></div>
-      </div>
-    </header>
-    <div class="main-box">
-      <p>今天去楼下遛狗，发现了一家新开的甜品店..</p>
-      <div class="main-img">
-        <img src="../assets/img/flower.png"/>
-      </div>
-      <article class="data-box">
-        <div class="data-box-time">
-          <span>评论18</span>
-          <span>喜欢25</span>
-          <span>6月26日 16:58</span>
-        </div>
-        <div>
-          <span class="share"><van-icon name="comment-o"size="25px" /></span>
-          <span class="share"><van-icon name="share" size="25px"/></span>
-        </div>
-      </article>
-    </div>
-  </article>
-  <article class="first">
-    <header class="container">
-      <div class="logo">
-        <img src="../assets/img/logo-o.jpg">
-      </div>
-      <div class="name">
-        <span>开心小蘑菇</span>
-        <p>-happy everyda，much prosperity-</p>
-      </div>
-      <div class="icon">
-        <div slot="icon" ><van-icon name="like" size="23px" /></div>
-      </div>
-    </header>
-    <div class="main-box">
-      <p>我的新家，欢迎来做客</p>
-      <div class="main-img">
-        <img src="../assets/img/home.jpg"/>
-      </div>
-      <article class="data-box">
-        <div class="data-box-time">
-          <span>评论18</span>
-          <span>喜欢25</span>
-          <span>6月26日 16:58</span>
-        </div>
-        <div>
-          <span class="share"><van-icon name="comment-o"size="25px" /></span>
-          <span class="share"><van-icon name="share" size="25px"/></span>
-        </div>
-      </article>
-    </div>
-  </article>
+ <div style="margin-top: 120px">
+   <article class="first">
+     <header class="container">
+       <div class="logo">
+         <img src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1554687527&di=838d35136e344c1428f881ab80dc2f2e&src=http://b-ssl.duitang.com/uploads/item/201711/01/20171101211115_ZBPz5.jpeg" alt="">
+       </div>
+       <div class="name">
+         <span>多啦A梦的小木屋</span>
+         <p>-Much offter,much prosperity-</p>
+       </div>
+       <div class="icon">
+         <div slot="icon" ><van-icon name="like" size="23px" /></div>
+       </div>
+     </header>
+     <div class="main-box">
+       <p>今天去楼下遛狗，发现了一家新开的甜品店..</p>
+       <div class="main-img">
+         <img src="../assets/img/flower.png"/>
+       </div>
+       <article class="data-box">
+         <div class="data-box-time">
+           <span>评论18</span>
+           <span>喜欢25</span>
+           <span>6月26日 16:58</span>
+         </div>
+         <div>
+           <span class="share"><van-icon name="comment-o"size="25px" /></span>
+           <span class="share"><van-icon name="share" size="25px"/></span>
+         </div>
+       </article>
+     </div>
+   </article>
+   <article class="first">
+     <header class="container">
+       <div class="logo">
+         <img src="../assets/img/logo-o.jpg">
+       </div>
+       <div class="name">
+         <span>开心小蘑菇</span>
+         <p>-happy everyda，much prosperity-</p>
+       </div>
+       <div class="icon">
+         <div slot="icon" ><van-icon name="like" size="23px" /></div>
+       </div>
+     </header>
+     <div class="main-box">
+       <p>我的新家，欢迎来做客</p>
+       <div class="main-img">
+         <img src="../assets/img/home.jpg"/>
+       </div>
+       <article class="data-box">
+         <div class="data-box-time">
+           <span>评论18</span>
+           <span>喜欢25</span>
+           <span>6月26日 16:58</span>
+         </div>
+         <div>
+           <span class="share"><van-icon name="comment-o"size="25px" /></span>
+           <span class="share"><van-icon name="share" size="25px"/></span>
+         </div>
+       </article>
+     </div>
+   </article>
+ </div>
 </div>
 </template>
 
@@ -86,9 +88,13 @@
     height: 50px;
     line-height: 50px;
     background: linear-gradient(to bottom right, #3EC7F8 , #04A6E8);
-    position: relative;
+    position: fixed;
     text-align: center;
     width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 998;
   }
   .title h3{
     color: #fff;
