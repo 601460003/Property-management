@@ -1,87 +1,147 @@
 <template>
-<div class="big-box">
+<div class="big-box" >
   <!--社区短文-->
+<div v-show="sa">
   <header class="title">
-    <span class="top"><van-icon name="records" /></span>
+    <span class="top" @click="write"><van-icon name="records" /></span>
     <h3>社区</h3>
   </header>
   <!--独立的评论-->
- <div style="margin-top: 120px">
-   <article class="first">
-     <header class="container">
-       <div class="logo">
-         <img src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1554687527&di=838d35136e344c1428f881ab80dc2f2e&src=http://b-ssl.duitang.com/uploads/item/201711/01/20171101211115_ZBPz5.jpeg" alt="">
-       </div>
-       <div class="name">
-         <span>多啦A梦的小木屋</span>
-         <p>-Much offter,much prosperity-</p>
-       </div>
-       <div class="icon">
-         <div slot="icon" ><van-icon name="like" size="23px" /></div>
-       </div>
-     </header>
-     <div class="main-box">
-       <p>今天去楼下遛狗，发现了一家新开的甜品店..</p>
-       <div class="main-img">
-         <img src="../assets/img/flower.png"/>
-       </div>
-       <article class="data-box">
-         <div class="data-box-time">
-           <span>评论18</span>
-           <span>喜欢25</span>
-           <span>6月26日 16:58</span>
-         </div>
-         <div>
-           <span class="share"><van-icon name="comment-o"size="25px" /></span>
-           <span class="share"><van-icon name="share" size="25px"/></span>
-         </div>
-       </article>
-     </div>
-   </article>
-   <article class="first">
-     <header class="container">
-       <div class="logo">
-         <img src="../assets/img/logo-o.jpg">
-       </div>
-       <div class="name">
-         <span>开心小蘑菇</span>
-         <p>-happy everyda，much prosperity-</p>
-       </div>
-       <div class="icon">
-         <div slot="icon" ><van-icon name="like" size="23px" /></div>
-       </div>
-     </header>
-     <div class="main-box">
-       <p>我的新家，欢迎来做客</p>
-       <div class="main-img">
-         <img src="../assets/img/home.jpg"/>
-       </div>
-       <article class="data-box">
-         <div class="data-box-time">
-           <span>评论18</span>
-           <span>喜欢25</span>
-           <span>6月26日 16:58</span>
-         </div>
-         <div>
-           <span class="share"><van-icon name="comment-o"size="25px" /></span>
-           <span class="share"><van-icon name="share" size="25px"/></span>
-         </div>
-       </article>
-     </div>
-   </article>
- </div>
+  <div style="margin-top: 120px">
+    <article class="first">
+      <header class="container">
+        <div class="logo">
+          <img src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1554687527&di=838d35136e344c1428f881ab80dc2f2e&src=http://b-ssl.duitang.com/uploads/item/201711/01/20171101211115_ZBPz5.jpeg" alt="">
+        </div>
+        <div class="name">
+          <span>多啦A梦的小木屋</span>
+          <p>-Much offter,much prosperity-</p>
+        </div>
+        <div class="icon">
+          <div slot="icon" ><van-icon name="like" size="23px" /></div>
+        </div>
+      </header>
+      <div class="main-box">
+        <p>今天去楼下遛狗，发现了一家新开的甜品店..</p>
+        <div class="main-img">
+          <img src="../assets/img/flower.png"/>
+        </div>
+        <article class="data-box">
+          <div class="data-box-time">
+            <span>评论18</span>
+            <span>喜欢25</span>
+            <span>6月26日 16:58</span>
+          </div>
+          <div>
+            <span class="share"><van-icon name="comment-o"size="25px" /></span>
+            <span class="share"><van-icon name="share" size="25px"/></span>
+          </div>
+        </article>
+      </div>
+    </article>
+    <article class="first">
+      <header class="container">
+        <div class="logo">
+          <img src="../assets/img/logo-o.jpg">
+        </div>
+        <div class="name">
+          <span>开心小蘑菇</span>
+          <p>-happy everyda，much prosperity-</p>
+        </div>
+        <div class="icon">
+          <div slot="icon" ><van-icon name="like" size="23px" /></div>
+        </div>
+      </header>
+      <div class="main-box">
+        <p>我的新家，欢迎来做客</p>
+        <div class="main-img">
+          <img src="../assets/img/home.jpg"/>
+        </div>
+        <article class="data-box">
+          <div class="data-box-time">
+            <span>评论18</span>
+            <span>喜欢25</span>
+            <span>6月26日 16:58</span>
+          </div>
+          <div>
+            <span class="share"><van-icon name="comment-o"size="25px" /></span>
+            <span class="share"><van-icon name="share" size="25px"/></span>
+          </div>
+        </article>
+      </div>
+    </article>
+  </div>
+</div>
+  <div v-show="sb"  class="nos">
+   <header class="write-box">
+     <div @click="close"><van-icon name="cross" size="20px" /></div>
+     <h3>发动态</h3>
+     <div >发布</div>
+   </header>
+    <div class="content">
+      <textarea class="text" rows="20" cols="50" maxlength="500" placeholder="分享小区生活..."></textarea>
+    </div>
+  </div>
 </div>
 </template>
 
 <script>
     export default {
-        name: "community"
+      data(){
+        return{
+          sa:true,
+          sb:false
+        }
+      },
+       methods:{
+         write(){
+           this.sa=false
+           this.sb=true
+         },
+         close(){
+           this.sa=true
+           this.sb=false
+         }
+    }
     }
 </script>
 
 <style scoped>
+  .content{
+    margin-top: 70px;
+  }
+  .text{
+    background: #FAFAFA;
+    font-size: 16px;
+    color: #999;
+    text-indent: 15px;
+
+  }
+  .write-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom right, #3EC7F8 , #04A6E8);
+    color: white;
+    padding: 0 10px;
+    border-bottom: 1px solid white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  .write-box h3{
+    padding: 10px 0;
+  }
+  .nos{
+    position: absolute;
+    top: 0;
+    z-index: 2000;
+    width: 100%;
+    min-height: 105vh;
+    background:  #FAFAFA;
+  }
   .big-box{
-    min-height: 120vh;
+    min-height: 105vh;
     background: #FAFAFA;
   }
   .title{

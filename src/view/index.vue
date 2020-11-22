@@ -101,6 +101,8 @@
         if (time) {
           let nowTime = new Date().getTime();
           let diff = nowTime-time
+          console.log(nowTime);
+
           if (diff < 30 * 60 * 1000) {
             this.isShow = false
           }

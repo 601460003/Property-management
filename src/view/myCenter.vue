@@ -8,8 +8,8 @@
           <span class="header-other">充值</span>
         </div>
         <div class="header-main">
-          <img src="../assets/header.jpeg" />
-          <p>物业管理员</p>
+          <img src="http://www.czgongzuo.com/Files/PerPhoto/photoman.gif" />
+          <p>未登录</p>
           <p>[普通会员]</p>
         </div>
         <div class="header-right">
@@ -163,8 +163,8 @@
     100% {background:green;}
   }
   .header-main img{
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     margin-bottom: 5px;
   }
